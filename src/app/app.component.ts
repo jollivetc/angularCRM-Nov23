@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularCRM';
+  cars = ['Citroen', 'Peugeot','Tesla', 'Toyota'];
+
+  onClick($event:MouseEvent):void{
+    console.log($event);
+  }
 }
