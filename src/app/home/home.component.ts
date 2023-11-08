@@ -23,9 +23,11 @@ export class HomeComponent implements OnDestroy {
       error: (error:Error)=>console.error(error),
       complete:()=>console.log('complete')
     };
+    console.log('before');
     const sub = this.demoObs.getObservable().pipe(
         map(data=>data*10)
     ).subscribe(subscriber);
+    console.log('after');
     this.subs.push(sub);
   }
 
