@@ -9,8 +9,9 @@ import { Observable, Subscription, catchError, map, of, take } from 'rxjs';
 })
 export class HomeComponent implements OnDestroy {
 
-  subs:Subscription[]=[];
+  private subs:Subscription[]=[];
   obs? : Observable<number>;
+  phoneNumber:string = '0123456789'
   constructor(private demoObs:DemoObservableService){}
 
   ngOnDestroy(): void {
