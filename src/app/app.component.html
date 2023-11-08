@@ -4,7 +4,9 @@
   <span>Button</span>
 </mat-toolbar>
 
-
-
 <crm-login></crm-login>
 
+<crm-dummy label="Hello"
+    (clicked)="catched($event)"></crm-dummy>
+ <crm-dummy [label]="title"
+    (clicked)="catched2($event)"></crm-dummy>

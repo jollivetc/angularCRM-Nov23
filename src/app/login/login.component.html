@@ -9,10 +9,9 @@
             formControlName="login">
       </mat-form-field>
 
-      <span *ngIf="loginForm.get('login')?.touched && loginForm.get('login')?.errors">
-        <span *ngIf="loginForm.get('login')?.errors?.['required']">Missing login</span>
-        <span *ngIf="loginForm.get('login')?.errors?.['minlength']">3 chars at least</span>
-      </span>
+      <crm-help [field]="loginForm.get('login')!"
+                [errorMessages]="loginErrors"></crm-help>
+
     </p>
     <p>
       <mat-form-field>

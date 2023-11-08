@@ -7,9 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularCRM';
-  cars = ['Citroen', 'Peugeot','Tesla', 'Toyota'];
 
-  onClick($event:MouseEvent):void{
+  catched($event: any):void{
     console.log($event);
+  }
+  catched2($event: any):void{
+    console.warn($event);
   }
 }

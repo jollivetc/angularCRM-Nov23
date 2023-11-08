@@ -9,6 +9,10 @@ import { AbstractControl, FormControl, FormGroup, ValidationErrors, Validators }
 export class LoginComponent {
 
   loginForm: FormGroup;
+  loginErrors = {
+      required : 'Missing login',
+      minlength : 'more than 3 characters'
+  }
 
   constructor(){
     this.loginForm = new FormGroup({
