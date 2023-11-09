@@ -1,0 +1,21 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { ConsumerFicheComponent } from './consumer-fiche.component';
+
+describe('ConsumerFicheComponent', () => {
+  let component: ConsumerFicheComponent;
+  let fixture: ComponentFixture<ConsumerFicheComponent>;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [ConsumerFicheComponent]
+    });
+    fixture = TestBed.createComponent(ConsumerFicheComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

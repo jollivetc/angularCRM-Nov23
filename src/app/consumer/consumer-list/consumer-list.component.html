@@ -1,0 +1,38 @@
+<input type="text" [(ngModel)]="search" (keyup)="doSearch()">
+<span>
+  <a mat-icon-button matTooltip="New"
+      routerLink="/consumers/new">
+    <mat-icon>person_add</mat-icon>
+  </a>
+</span>
+
+<table>
+  <tr>
+    <th>Civility</th>
+    <th>firstname</th>
+    <th>lastname</th>
+    <th>email</th>
+    <th>phone</th>
+    <th>actions</th>
+  </tr>
+  <tr *ngFor="let consumer of consumersObs|async">
+    <td>{{consumer.civility}}</td>
+    <td>{{consumer.firstname}}</td>
+    <td>{{consumer.lastname}}</td>
+    <td>{{consumer.email}}</td>
+    <td>{{consumer.phone|phone}}</td>
+    <td>
+      <span>
+        <a mat-icon-button matTooltip="Edit"
+            routerLink="/consumers/{{consumer.id}}">
+          <mat-icon>edit</mat-icon>
+        </a>
+      </span>
+      <span>
+        <button mat-icon-button (click)="delete(consumer.id!)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </span>
+    </td>
+  </tr>
+</table>
